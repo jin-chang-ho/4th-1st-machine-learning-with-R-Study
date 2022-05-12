@@ -1,1 +1,1 @@
-# 4th_1st_machine_learning_with_R_study
+4학년 1학기 연구실 R을 활용한 머신러닝 스터디
