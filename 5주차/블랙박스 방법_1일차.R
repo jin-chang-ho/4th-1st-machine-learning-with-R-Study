@@ -34,7 +34,7 @@ predicted_strength2 <- model_results2$net.result
 cor(predicted_strength2, concrete_test$strength)
 
 softplus <- function(x) { log(1 + exp(x)) }
-concrete_model3 <- neuralnet(strength ~ cement + slag + ash + water + superplastic + coarseagg + fineagg + age, data = concrete_train, hidden = c(5, 5), act.fct = softplus, stepmax = 1e+06)
+concrete_model3 <- neuralnet(strength ~ cement + slag + ash + water + superplastic + coarseagg + fineagg + age, data = concrete_train, act.fct = softplus, hidden = c(5, 5))
 plot(concrete_model3)
 
 model_result3 <- compute(concrete_model3, concrete_test[1:8])
